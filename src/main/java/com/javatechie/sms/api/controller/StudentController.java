@@ -15,6 +15,8 @@ import com.javatechie.sms.api.service.StudentService;
 @RequestMapping("/student")
 public class StudentController {
 	
+	//TODO implement CRUD operations
+	
 	@Autowired
 	private StudentService service;
 
