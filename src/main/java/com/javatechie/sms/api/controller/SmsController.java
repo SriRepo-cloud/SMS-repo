@@ -13,7 +13,7 @@ public class SmsController {
 	@GetMapping("/msg")
 	public ResponseEntity<String> message(){
 		
-		return new ResponseEntity<>("Hi, good morning!!", HttpStatus.ACCEPTED);
+		return new ResponseEntity<>("Hi, good morning!! this is first git demo message", HttpStatus.ACCEPTED);
 	}
 
 }
