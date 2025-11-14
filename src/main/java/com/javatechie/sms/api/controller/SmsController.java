@@ -9,11 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/sms")
 public class SmsController {
-	
+
 	@GetMapping("/msg")
-	public ResponseEntity<String> message(){
-		
-		return new ResponseEntity<>("Hi, good morning!! this is jenkins testing purpose", HttpStatus.ACCEPTED);
+	public ResponseEntity<String> message() {
+		String msg = "Hi, good morning!! this is jenkins testing purpose";
+
+		return new ResponseEntity<>(msg, HttpStatus.ACCEPTED);
 	}
 
 }
