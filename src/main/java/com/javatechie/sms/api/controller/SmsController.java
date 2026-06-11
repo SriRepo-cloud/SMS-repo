@@ -12,7 +12,7 @@ public class SmsController {
 
 	@GetMapping("/msg")
 	public ResponseEntity<String> message() {
-		String msg = "Hi, good morning!! this is jenkins testing purpose";
+		String msg = "Hi, good morning!! this is testing purpose";
 
 		return new ResponseEntity<>(msg, HttpStatus.ACCEPTED);
 	}

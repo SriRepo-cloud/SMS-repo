@@ -23,7 +23,6 @@ public class StudentController {
 	@PostMapping("/saveStudent")
 	public ResponseEntity<Student> saveStudent(@RequestBody Student student){
 		Student save = service.save(student);
-		
 		return new ResponseEntity<> (save, HttpStatus.CREATED);
 	}
 }
