@@ -1,6 +1,8 @@
 package com.javatechie.sms.api;
 
 public class Practice {
-//commented line
 
+	public void practiceDSA(String example) {
+		System.out.println("Start practice on " + example);
+	}
 }
