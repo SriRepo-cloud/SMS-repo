@@ -1,5 +1,7 @@
 package com.javatechie.sms.api.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,10 @@ public class StudentService {
 	
 	public Student save(Student student) {
 		return repository.save(student);
+	}
+	
+	public Optional<Student> findById(int id) {
+		return repository.findById(id);
 	}
 
 }
