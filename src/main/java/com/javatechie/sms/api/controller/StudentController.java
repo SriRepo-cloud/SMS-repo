@@ -1,8 +1,12 @@
 package com.javatechie.sms.api.controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,5 +28,11 @@ public class StudentController {
 	public ResponseEntity<Student> saveStudent(@RequestBody Student student){
 		Student save = service.save(student);
 		return new ResponseEntity<> (save, HttpStatus.CREATED);
+	}
+	
+	@GetMapping("/getStudent/{id}")
+	public ResponseEntity<Student> getStudent(@PathVariable int id){
+		Optional<Student> getStudentById = service.findById(id);
+		return getStudentById.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build()) ;
 	}
 }
